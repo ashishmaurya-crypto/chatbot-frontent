@@ -1,0 +1,65 @@
+.card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+}
+
+
+.card-hover{
+    animation: wobbleBottom 1s ease 0s 1 normal forwards;
+    background-color: var(--background-color);
+    z-index: 5;
+}
+
+.pulsePing{
+	animation: pulsePing 2s ease 0s 1 normal forwards;
+}
+
+
+@keyframes wobbleBottom {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+
+// 
+
+@keyframes pulsePing {
+	0% {
+		opacity: 0.8;
+		transform: scale(1);
+	}
+
+	80% {
+		opacity: 0;
+		transform: scale(5.5);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(40.2);
+	}
+}

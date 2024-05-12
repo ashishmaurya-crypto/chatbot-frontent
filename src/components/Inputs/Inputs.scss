@@ -1,0 +1,44 @@
+p h1 h2 h3 h4 h5 h6 span{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+
+    label{
+        color: white;
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .input-container-span{
+        border: 1px solid;
+        height: fit-content;
+        padding: 2px;
+        display: flex;
+        min-width: 200px;
+
+        input {
+            border: none;
+            background-color: transparent;
+            width: auto;
+        }
+        input:focus-visible{
+            outline: 3px solid #b3e6ff;
+            border-radius: inherit;
+        }
+
+        .input-container-span-adornment{
+            cursor: pointer;
+            border-left: 1px solid rgba(128, 128, 128, 0.253);
+            padding-left: 8px;
+            padding-right: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
