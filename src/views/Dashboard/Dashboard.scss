@@ -2,8 +2,8 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: rgb(4, 11, 93);
-    background: linear-gradient(306deg, rgba(4, 11, 93, 1) 0%, rgba(13, 85, 87, 0.938813025210084) 44%);
+    // background: rgb(4, 11, 93);
+    background-image: linear-gradient(to right top, #120537, #3b1561, #6e1e8a, #a920af, #eb12cf);
     // background-color: var(--moonstone);
     // border-radius: 0% 100% 100% 0% / 0% 57% 43% 0%;
     // z-index: -1;
@@ -55,6 +55,8 @@
             height: 50px;
             display: flex;
             justify-content: center;
+            color: #6e1e8a;
+            font-size: 30px;
         }
     }
 }

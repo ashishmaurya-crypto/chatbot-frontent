@@ -12,7 +12,23 @@
 }
 
 .pulsePing{
-	animation: pulsePing 2s ease 0s 1 normal forwards;
+	// animation: pulsePing 2s ease 0s 1 normal forwards;
+	background-color: pink;
+	transform: translateX(-100%) translateY(-100%);
+	mix-blend-mode: screen;
+	animation: ripple 2250ms ease-out forwards, fade 1500ms ease-out forwards;
+}
+
+
+@keyframes ripple {
+	0%   { transform: translate(100%, 100%); }
+	80%  { transform: translate(-100%, -100%) scale(50); }
+	100% { transform: translate(-100%, -100%) scale(50); opacity: 0; }
+}
+
+@keyframes fade {
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
 }
 
 

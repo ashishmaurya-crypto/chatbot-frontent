@@ -73,6 +73,15 @@ export const apiSlice = createApi({
 				};
 			},
 		}),
+		userDetail: builder.query({
+			query: (body) => {
+				return {
+					url: "users/detail",
+					method: "get",
+					body,
+				};
+			},
+		}),
 		dashboard: builder.mutation({
 			query: (body) => {
 				return {
@@ -90,4 +99,4 @@ export const apiSlice = createApi({
 	tagTypes: ["user", "org",]
 });
 
-export const { useLoginMutation, useDashboardMutation } = apiSlice;
+export const { useLoginMutation, useUserDetailQuery, useDashboardMutation } = apiSlice;

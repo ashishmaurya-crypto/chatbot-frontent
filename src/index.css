@@ -6,11 +6,11 @@
   --primary-color: var(--set-primary-color, #ff7200);
   --background-color: var(--set-background-color, #ffffff);
   --text-color: var(--set-text-color, #000000);
-  --platinum: #d8dbe2ff;
-  --powder-blue: #a9bcd0ff;
-  --moonstone: #58a4b0ff;
-  --charcoal: #373f51ff;
-  --melon: #daa49aff;
+  --darkVoilet-color : #120537;
+  --lightVoilet-color : #3b1561;
+  --darkPink-color : #6e1e8a;
+  --lightPink-color :#a920af;
+  --pink-color :#eb12cf;
   --green-color: #228b22;
   --white-color: #ffffff;
   --gray-color: #aaabaf;
@@ -18,15 +18,7 @@
   --red-color: #FF0101;
 
   /* SCSS Gradient */
-  --gradient-top: linear-gradient(0deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-right: linear-gradient(90deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-bottom: linear-gradient(180deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-left: linear-gradient(270deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-top-right: linear-gradient(45deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-bottom-right: linear-gradient(135deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-top-left: linear-gradient(225deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-bottom-left: linear-gradient(315deg, #d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
-  --gradient-radial: radial-gradient(#d8dbe2ff, #a9bcd0ff, #58a4b0ff, #373f51ff, #daa49aff);
+
 
   /* input-field */
   --input-border-color: var(--set-input-border-color, #D9D9D9);

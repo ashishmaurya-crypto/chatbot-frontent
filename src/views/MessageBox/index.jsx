@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './MessageBox.scss'
 
 export default function MessageIndex() {
   return (
-    <div>MessageIndex</div>
+    <div className='message-container'>
+      {/* MessageIndex */}
+    </div>
   )
 }

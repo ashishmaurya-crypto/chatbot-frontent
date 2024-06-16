@@ -1,20 +1,25 @@
 import React from 'react';
-import { Navigate, Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import './Layout.scss';
+import Navbar from './Navbar';
+import SideBar from './SideBar';
+import MessageIndex from '../MessageBox';
 
 export default function LayOutIndex({ children }) {
+
     return (
         <>
             <div className='chat-navigation-bar'>
-                <p>home</p>
-            </div>
+                <Navbar />
+            </div >
             <div className='chat-layout-container'>
                 <div className='chat-layout-sidebar-container'>
-                    <p>sidebar</p>
+                    <SideBar />
                 </div>
                 <div className='chat-layout-content-container'>
-                    <Outlet />
+                    {/* <Outlet /> */}
+                    <MessageIndex/>
                 </div>
-
             </div>
         </>
     )

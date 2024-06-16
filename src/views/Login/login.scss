@@ -2,23 +2,20 @@
     width: inherit;
     height: 100vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    background: #0c0c0ce1 url('./../../App/Assests/bg.png') center center/cover no-repeat;
+    background-image: linear-gradient(to right top, #120537, #3b1561, #6e1e8a, #a920af, #eb12cf);
     // opacity: 0.95;
+    
     backdrop-filter: blur(10px);
    
     overflow-y: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .login-header-container {
-    width: calc(100% - 350px);
-    background: rgba(255, 255, 255, 0.1);
-    // background: rgba(255, 255, 255, 0.493);
-    backdrop-filter: blur(1px);
-    // height: 100px;
+    width: fit-content;
     // border: 1px solid red;
-
     .login-header-content-logo-container {
         h1 {
             font-family: 'Poppins', sans-serif;
@@ -37,53 +34,60 @@
     }
 }
 
-.login-form-container {
-    width: 350px;
-    height: calc(100vh - 100px);
+.login-form-container{
+    // border: 1px solid red;
+    width: 380px;
+    height: 550px;
     background: rgba(255, 255, 255, 0.1);
-    // background: rgba(255, 255, 255, 0.493);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     backdrop-filter: blur(10px);
     border-radius: 25px;
-    // border: 1px solid rgba(255, 255, 255, 0.2);
-    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    // padding: 20px;
-    padding-top: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-   
+    align-items: end;
 }
 
-.login-form-container:hover {
+.login-form{
+    // border: 1px solid gold;
+    width: 100%;
+    height: 70%;
     background: rgba(255, 255, 255, 0.255);
     backdrop-filter: blur(40px);
-    // border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.login-top-image-container {
-    width: 50%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // border: 1px solid rgba(255, 255, 255, 0.2);
-    background: #ffffff00 url('./../../App/Assests/chat.png') center top/cover no-repeat content-box;
-    
-    // transform: translateY(10px);
-}
-
-.login-form-content-container {
-    width: 100%;
-    height: 100%;
+    border-radius: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.255);
-    gap: 10px 10px;
+    gap: 20px;
+    position: relative;
+    z-index: 5;
+
+    .login-top-image-container{
+        // border: 1px solid rgba(255, 255, 255, 0.2);
+        height: 120px;
+        width: calc(100% - 40px);
+        position: absolute;
+        top: -120px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        img{
+            width: 150px;
+            height: 150px;
+        }
+
+    }
+
+    .connect-text{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        line-height: 10px;
+    }
+
+    .social-media-logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        line-height: 10px;
+    }
 }
+
