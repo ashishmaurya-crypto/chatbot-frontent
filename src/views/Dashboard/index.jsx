@@ -10,7 +10,7 @@ export default function DashboardIndex() {
         <>
             <div className='dashboard-container'>
                 <div className='heading-container'>
-                    <h1>Welcome to Fun: Your Ultimate Source of Entertainment!</h1>
+                    <h1>Bubble Apps</h1>
                 </div>
                 <div className='dashboard-card-container'>
                     <Card className={'item-card'} onClick={() => navigate("/chat/login")}>
@@ -31,18 +31,6 @@ export default function DashboardIndex() {
                         </div>
                         <div className='title'>Music</div>
                     </Card>
-                    {/* <HoverCard
-                        href="https://www.mythrillfiction.com/the-dark-rider"
-                        coverImage="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg"
-                        titleImage="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png"
-                        characterImage="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp"
-                    />
-                    <HoverCard
-                        href="https://www.mythrillfiction.com/force-mage"
-                        coverImage="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
-                        titleImage="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
-                        characterImage="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
-                    /> */}
                 </div>
             </div>
         </>

@@ -2,20 +2,45 @@ import { apiSlice } from "./apislice";
 
 export const userSlice = apiSlice.injectEndpoints({
     endpoints : (builder) => ({
-        userDetail: builder.mutation({
+		// userDetail: builder.query({
+		// 	query: (body) => {
+		// 		return {
+		// 			url: "/users/detail",
+		// 			method: "POST",
+		// 			body: body,
+		// 			keepUnusedDataFor: 0,
+		// 		};
+		// 	},
+		// }),
+        // userDetail: builder.mutation({
+		// 	query: (body) => {
+		// 		return {
+		// 			url: "/users/detail",
+		// 			method: "POST",
+		// 			body: body,
+		// 			keepUnusedDataFor: 0,
+		// 		};
+		// 	},
+		// }),
+		// getContactList : builder.query({
+		// 	query: (body) => {
+		// 		return {
+		// 			url: "users/get_contact_list",
+		// 			method: "get",
+		// 			body,
+		// 		};
+		// 	},
+		// }),
+		getContactList: builder.query({
 			query: (body) => {
 				return {
-					url: "/userDetail",
-					method: "POST",
-					headers: {
-						Authorization: localStorage.getItem("token"),
-					},
-					body: body,
-					keepUnusedDataFor: 0,
+					url: "users/get_contact_list",
+					method: "post",
+					body,
 				};
 			},
-		})
+		}),
     })
 })
 
-export const { useUserDetailMutation } = userSlice;
+export const { useGetContactListQuery } = userSlice;

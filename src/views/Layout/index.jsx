@@ -1,11 +1,12 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useOutlet } from 'react-router-dom';
 import './Layout.scss';
 import Navbar from './Navbar';
 import SideBar from './SideBar';
-import MessageIndex from '../MessageBox';
+import Welcome from './Welcome';
 
-export default function LayOutIndex({ children }) {
+export default function LayOutIndex() {
+    const checkOutlet = useOutlet();
 
     return (
         <>
@@ -18,7 +19,7 @@ export default function LayOutIndex({ children }) {
                 </div>
                 <div className='chat-layout-content-container'>
                     {/* <Outlet /> */}
-                    <MessageIndex/>
+                    {checkOutlet ?  <Outlet /> : <Welcome/>}
                 </div>
             </div>
         </>

@@ -1,0 +1,122 @@
+.emoji-container {
+  display: flex;
+  width: 100%;
+
+
+
+  .input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    // border: 1px solid rgb(234, 10, 10);
+    position: relative;
+
+    .input-outer-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      position: relative;
+      border: 2px solid var(--lightestVoilet-color);
+      background-color: rgb(35, 36, 35);
+      border-radius: 35px;
+      padding: 0px 10px;
+
+      .emoji-button-container {
+        color: rgb(231, 120, 60);
+        width: fit-content;
+        // border: 1px solid white;
+        margin-bottom: 18px;
+        position: absolute;
+        left: 10px;
+
+        .emoji-picker-react {
+          background-color: #080420;
+          box-shadow: 0 5px 10px #9a86f3;
+
+          .emoji-scroll-wrapper::-webkit-scrollbar {
+            width: 5px;
+            background-color: #080420;
+            &-thumb {
+              background-color: #9186f3;
+            }
+          }
+          
+          .emoji-categories {
+            button {
+              filter: contrast(0);
+            }
+          }
+          .emoji-search {
+            background-color: #080420;
+            border-color: #9186f3;
+          }
+          .emoji-group::before{
+            background-color: #080420;
+          }
+        }
+        
+       
+        
+      }
+
+      .message-input {
+        flex-grow: 1;
+        resize: none;
+        /* Prevent manual resizing */
+        overflow-y: auto;
+        padding: 25px 30px 10px 40px;
+        border: none;
+        background-color: rgb(35, 36, 35);
+        border-radius: 30px;
+        font-size: 16px;
+        color: white;
+        // line-height: 1.5;
+        max-height: 200px;
+      }
+
+      .message-input:focus{
+        outline: none;
+      }
+
+      .message-input::-webkit-scrollbar {
+        width: 5px;
+      }
+  
+      .message-input::-webkit-scrollbar-track {
+        background: #1e1e1e00;
+      }
+  
+      .message-input::-webkit-scrollbar-thumb {
+        background-color: #88888843;
+        border-radius: 10px;
+        // border: 2px solid #1e1e1e;
+      }
+  
+      .message-input::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+
+
+
+
+    .submit {
+      width: 50px;
+      height: 50px;
+      background-color: var(--lightestVoilet-color);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    
+  }
+}

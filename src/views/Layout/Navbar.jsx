@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Icon } from '@iconify-icon/react';
 import { useUserDetailQuery } from '../../endpoints/apislice';
 import { Input } from '../../components/Inputs';
@@ -7,8 +7,8 @@ import { Input } from '../../components/Inputs';
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const { data: userDetail } = useUserDetailQuery();
-  console.log(userDetail);
+  const { data: userDetail } = useUserDetailQuery({}, { refetchOnMountOrArgChange: true });
+  // console.log('userdetail', userDetail);
 
   const handleLogout = () => {
     localStorage.clear();
@@ -33,8 +33,18 @@ export default function Navbar() {
             />
           </span>
         </div>
+        <div className='profile-container'>
+          <div className='userlogo'>
+            <Icon width={'100%'} icon="gg:profile" />
+          </div>
+          <div className='username'>
+            <p>{userDetail?.userName}</p>
+          </div>
+        </div>
         <div className='setting' onClick={handleLogout}>
-          <Icon icon="hugeicons:logout-03" width={35} />
+          <Icon icon="hugeicons:logout-04" width={25}/>
+          <p>Log Out</p>
+          {/* <Icon icon="hugeicons:logout-03" width={35} /> */}
         </div>
       </div>
     </>

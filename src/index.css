@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   /* default primarycolor == #ff7200 */
@@ -8,9 +9,12 @@
   --text-color: var(--set-text-color, #000000);
   --darkVoilet-color : #120537;
   --lightVoilet-color : #3b1561;
+  --lightestVoilet-color : rgb(152, 112, 144);
   --darkPink-color : #6e1e8a;
   --lightPink-color :#a920af;
+  --darkestPink-color :rgb(234, 54, 148);
   --pink-color :#eb12cf;
+  --yellowish-color : rgb(255, 207, 103);
   --green-color: #228b22;
   --white-color: #ffffff;
   --gray-color: #aaabaf;
@@ -37,14 +41,12 @@
 
 body {
   margin: 0;
-  font-family:  'Caveat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:  Asap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace, Asap;
 }

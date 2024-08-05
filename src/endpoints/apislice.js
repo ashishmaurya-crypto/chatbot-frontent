@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const baseQuery = fetchBaseQuery({
 	baseUrl: 'http://localhost:5000/',
 	prepareHeaders: (headers) => {
-		const token = localStorage.getItem("token");
+		const token = localStorage.getItem("chatToken");
 		headers.set("authorization", token); //Bearer ${token}
 		return headers;
 	},
@@ -77,7 +77,7 @@ export const apiSlice = createApi({
 			query: (body) => {
 				return {
 					url: "users/detail",
-					method: "get",
+					method: "post",
 					body,
 				};
 			},
@@ -87,9 +87,6 @@ export const apiSlice = createApi({
 				return {
 					url: "/dashboard",
 					method: "POST",
-					headers: {
-						Authorization: localStorage.getItem("token"),
-					},
 					body: body,
 					keepUnusedDataFor: 0,
 				};

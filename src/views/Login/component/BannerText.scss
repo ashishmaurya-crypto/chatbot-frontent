@@ -75,4 +75,22 @@
   }
 }
 
+@media (min-width: 600px) and (max-width: 1200px) {
+  .sweet-title {
+    /* Add your custom styles for the specified range here */
+    color: #f8f7f4; /* Example change */
+    font-size: clamp(2rem, 5vw, 5rem); /* Adjusting font size */
+    text-shadow: 2px 1px 1px #4af7ff, 1px 1px 1px #165bfb, 3px 1px 1px #4af7ff,
+      2px 2px 1px #165bfb, 4px 2px 1px #4af7ff, 3px 3px 1px #165bfb,
+      5px 3px 1px #4af7ff, 4px 4px 1px #165bfb, 6px 4px 1px #4af7ff,
+      5px 5px 1px #165bfb, 7px 5px 1px #4af7ff, 6px 6px 1px #165bfb,
+      8px 6px 1px #4af7ff; /* Adjusting text shadow */
+  }
+
+  .sweet-title span:before {
+    text-shadow: 1px 1px 1px #e94aa1, -0.5px -0.5px 1px #c736f9,
+      -1px 1px 1px #e94aa1, 0.5px -0.5px 1px #f736f9; /* Adjusting text shadow for spans */
+  }
+}
+
 
