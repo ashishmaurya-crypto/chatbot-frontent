@@ -7,7 +7,7 @@ import { Input } from '../../components/Inputs';
 
 export default function Navbar() {
   const navigate = useNavigate();
-  const { data: userDetail } = useUserDetailQuery({}, { refetchOnMountOrArgChange: true });
+  const { data: userDetail } = useUserDetailQuery({});
   // console.log('userdetail', userDetail);
 
   const handleLogout = () => {

@@ -40,7 +40,25 @@ export const userSlice = apiSlice.injectEndpoints({
 				};
 			},
 		}),
+		getMessages: builder.mutation({
+			query: (body) => {
+				return {
+					url: "messages/getMessage",
+					method: "post",
+					body,
+				};
+			},
+		}),
+		sendMessages: builder.mutation({
+			query: (body) => {
+				return {
+					url: "messages/sendMessage",
+					method: "post",
+					body,
+				};
+			},
+		}),
     })
 })
 
-export const { useGetContactListQuery } = userSlice;
+export const { useGetContactListQuery, useGetMessagesMutation, useSendMessagesMutation } = userSlice;
