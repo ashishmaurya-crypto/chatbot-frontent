@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 
 const baseQuery = fetchBaseQuery({
-	baseUrl: 'http://localhost:5000/',
+	baseUrl: 'http://192.168.229.129:5000/',
 	prepareHeaders: (headers) => {
 		const token = localStorage.getItem("chatToken");
 		headers.set("authorization", token); //Bearer ${token}

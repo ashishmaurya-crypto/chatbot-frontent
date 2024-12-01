@@ -7,11 +7,13 @@ import ChatInputIndex from '../../components/ChatInput';
 import { capitalizeFirstLetter } from '../../services/functions';
 import { useUserDetailQuery } from '../../endpoints/apislice';
 import { useSendMessagesMutation, useGetMessagesMutation } from '../../endpoints/userSlice';
+import useMessages from '../../hooks/hooks';
 
 export default function MessageIndex() {
   let { UserId } = useParams();
   const location = useLocation();
-  const socket = useOutletContext();
+  const messagesss = useMessages();
+  // const socket = useOutletContext();
   const { state } = location;
   const triggerRef = useRef(null);
   const messagesEndRef = useRef(null);
@@ -31,7 +33,7 @@ export default function MessageIndex() {
   }, []);
 
 
-  console.log('data==>', allMessage)
+  // console.log('data==>', allMessage)
 
 
   const handleSendMsg = async (msg) => {
@@ -50,9 +52,6 @@ export default function MessageIndex() {
       "sender": userDetail?._id,
       "recipients": receiverId,
     });
-    socket.current.emit("send-msg", {
-      ...payload
-    })
 
     const msgs = [...messages];
     msgs.push({fromSelf : true, message : msg});
@@ -61,12 +60,13 @@ export default function MessageIndex() {
   }
 
   useEffect(()=> {
-    if(socket.current){
-      socket.current.on("msg-recieve", (msg)=> {
-        setArrivalMessage({fromSelf : false, message : msg})
-      })
+    if(messagesss){
+      getMessagesTrigger({
+        "sender": userDetail?._id,
+        "recipients": receiverId,
+      });
     }
-  }, [])
+  }, [messagesss])
 
 
   useEffect(()=> {

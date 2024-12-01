@@ -6,22 +6,11 @@ import SideBar from './SideBar';
 import Welcome from './Welcome';
 import { io } from 'socket.io-client';
 import { useUserDetailQuery } from '../../endpoints/apislice';
+import { useSocketConnection } from '../../hooks/hooks';
 
 export default function LayOutIndex() {
-    const socket = useRef();
-    const { data: userDetail } = useUserDetailQuery({});
     const checkOutlet = useOutlet();
-    const baseUrl = 'http://localhost:5000/';
-
-    useEffect(()=> {
-        console.log('layout', userDetail)
-        if(userDetail?._id){
-            socket.current = io(baseUrl);
-            socket.current.emit("add-user", userDetail?._id)
-
-        }
-        
-    },[userDetail?._id])
+    useSocketConnection()
 
     return (
         <>
@@ -34,7 +23,7 @@ export default function LayOutIndex() {
                 </div>
                 <div className='chat-layout-content-container'>
                     {/* <Outlet /> */}
-                    {checkOutlet ?  <Outlet context={socket} /> : <Welcome/>}
+                    {checkOutlet ?  <Outlet /> : <Welcome/>}
                 </div>
             </div>
         </>
